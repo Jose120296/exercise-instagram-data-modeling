@@ -36,7 +36,7 @@ class Media(Base):
 class Follower(Base):
     __tablename__ = 'follower'
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('usuario.id'), primary_key=True)
-    follower_id = Column(Integer, ForeignKey('usuario.id'), primary_key=True)
+    user_id = Column(Integer, ForeignKey('usuario.id'))
+    follower_id = Column(Integer, ForeignKey('usuario.id'))
     
 render_er(Base, 'diagram.png')
